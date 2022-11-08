@@ -336,28 +336,45 @@ if ($('#thanks2-body').length > 0) {
  
 
  // Tab
- const tabItemAdaptive = document.querySelectorAll(".tenth__btn");
- const tabContentAdaptive = document.querySelectorAll(".tenth__more");
- const effect = document.querySelector('.tenth__effect');
-
- function tabChangerAdaptive(item, content) {
+ const tabItem = document.querySelectorAll(".tab");
+const tabContent = document.querySelectorAll(".content");
+const tabItemTwo = document.querySelectorAll(".tab-two");
+const tabContentTwo = document.querySelectorAll(".content-two");
+const tabItemThree = document.querySelectorAll(".tab-three");
+const tabContentThree = document.querySelectorAll(".content-three");
+ function tabChanger(item, content) {
 	item.forEach((tab, index) => {
-		tab.addEventListener('click', function(){
+	   tab.addEventListener('click', function(){
+		  content.forEach(content => {
+			 content.classList.remove('active');
+		  })
+		  item.forEach(tab => {
+			 tab.classList.remove('active');
+		  })
+		
+		  
+		  content[index].classList.add('active');
+		  item[index].classList.add('active'); 
 		 
-			
-			content[index].classList.toggle('active');
-			item[index].classList.toggle('active'); 
-			effect.classList.toggle('active'); 
-		  if(item[index].classList.contains('active')){
-			item[index].innerHTML="Скрыть"
-		  }else{
-			item[index].innerHTML="Узнать больше"
-		  }
-			
-		})
+		  
+	   })
 	})
-}
-tabChangerAdaptive(tabItemAdaptive, tabContentAdaptive);
+ }
+ tabChanger(tabItem, tabContent);
+ tabChanger(tabItemTwo, tabContentTwo);
+ tabChanger(tabItemThree, tabContentThree);
+//  const tabItemAdaptive = document.querySelectorAll(".tenth__btn");
+//  const tabContentAdaptive = document.querySelectorAll(".tenth__more");
+//  function tabChangerAdaptive(item, content) {
+// 	item.forEach((tab, index) => {
+// 		tab.addEventListener('click', function(){
+// 			content[index].classList.toggle('active');
+// 			item[index].classList.toggle('active'); 
+		  
+// 		})
+// 	})
+// }
+// tabChangerAdaptive(tabItemAdaptive, tabContentAdaptive);
 
 
 	

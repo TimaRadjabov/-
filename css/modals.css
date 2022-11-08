@@ -35,10 +35,16 @@
 
 .popup__content {
   background-color: #fff;
-  max-width: 800px;
+  max-width: 780px;
   margin: 0 auto;
   position: relative;
-  border-radius: 8px;
+  border-radius: 6px;
+  box-shadow: 0px 100px 199px rgba(82, 82, 82, 0.07),
+    0px 41.7776px 83.1374px rgba(82, 82, 82, 0.0503198),
+    0px 22.3363px 44.4493px rgba(82, 82, 82, 0.0417275),
+    0px 12.5216px 24.9179px rgba(82, 82, 82, 0.035),
+    0px 6.6501px 13.2337px rgba(82, 82, 82, 0.0282725),
+    0px 2.76726px 5.50684px rgba(82, 82, 82, 0.0196802);
 }
 
 .btn-close {
@@ -66,7 +72,7 @@
   content: "";
   background-color: #fff;
   height: 30px;
-  width: 4px;
+  width: 3px;
   position: absolute;
   border-radius: 20px;
   top: 8px;
@@ -98,40 +104,42 @@
 }
 
 #third__modal {
-  background: url("../img/modal/03.png") no-repeat;
+  background: url("../img/modal/03.png") -22% 167%  no-repeat, #fff;
 }
 #second__modal {
-  background: url("../img/modal/02.png") no-repeat;
+  background: url("../img/modal/02.png") -12% 110% no-repeat, #fff;
 }
 #first__modal {
-  background: url("../img/modal/01.png") no-repeat;
+  background: url("../img/modal/01.png") 0 82% no-repeat, #fff;
 }
 
 .popup-presentation__item {
   display: flex;
-  padding: 50px 50px 0 50px;
+  justify-content: space-between;
+  padding: 53px 29px 35px 40px;
 }
 
 .popup-presentation__title {
-  font-family: Comfortaa;
+  font-family: "Gotham-Bold";
   font-size: 20px;
-  line-height: 34px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: #474747;
-  max-width: 320px;
-  margin-right: 30px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #2e2e2f;
+  margin-bottom: 8px;
 }
-.third__modal-title{
-  font-size: 19px;
+.popup-presentation__descr{
+  line-height: 140%;
+  color: #2E2E2F;
+  max-width: 330px;
 }
+
 .popup-presentation__form {
-  max-width: 350px;
+  max-width: 330px;
 }
 
 .modal-input {
-  width: 350px;
-  margin-bottom: 14px;
+  width: 330px;
+  margin-bottom: 20px;
 }
 
 .popup-presentation__form-field {
@@ -150,27 +158,27 @@
 }
 .form__policy-tick {
   margin-top: 3px;
+  margin-right: 5px;
 }
 .modal__policy p {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: 0.015em;
-  color: #a1a1a1;
-  margin-left: 4px;
-  margin-bottom: 40px;
+  font-size: 13px;
+  line-height: 160%;
+  color: #AEAEAF;
 }
 .modal__policy p .politicy {
-  text-decoration: underline;
+  font-size: 13px;
   cursor: pointer;
-}
-.modal__policy p .politicy:hover {
+  color: #AEAEAF;
   text-decoration: none;
 }
 .modal__cover {
-  width: 350px;
+  width: 330px;
 }
-
+.modal__cover .btn {
+  font-size: 20px;
+  line-height: 109.7%;
+  padding: 0 40px;
+}
 .popup-close {
   font-size: 18px;
   text-decoration: underline;
@@ -279,7 +287,7 @@
     max-width: 240px;
   }
   .modal__cover .btn {
-    padding: 19px 10px;
+    padding: 14px 10px;
     font-size: 16px;
   }
   .btn-close::before,
@@ -288,7 +296,17 @@
   }
 }
 @media (max-width: 1023px) {
- 
+  .modal-input {
+    width: 320px;
+}
+.popup-presentation__form-field{
+  align-items: flex-end;
+}
+#second__modal {
+  background: url("../img/modal/02.png") -12% 130% no-repeat, #fff;
+}
+}
+@media (max-width: 767px) {
   #third__modal {
     background: #fff;
   }
@@ -298,13 +316,15 @@
   #first__modal {
     background: #fff;
   }
-}
-@media (max-width: 767px) {
   .popup-presentation__item {
     padding: 0;
   }
   .popup-presentation__title {
-    margin: 25px 0 15px 40px;
+    margin: 25px 15px;
+    text-align: center;
+  }
+  .popup-presentation__descr{
+    margin: 0 auto 15px;
     text-align: center;
   }
 }
@@ -313,16 +333,21 @@
   .popup-presentation__title {
     font-size: 17px;
     line-height: 120%;
-    margin: 20px auto;
+    margin: 15px auto;
   }
   .popup-presentation__title span {
     font-size: 14px;
     margin-top: 5px;
   }
   .popup-presentation__descr {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 120%;
     padding: 10px;
+    margin-bottom: 0px;
   }
+  .form__field > *:not(:last-child) {
+    margin-bottom: 12px;
+}
   .form__input-email {
     background: url("../img/form/email.png") 18px 26px no-repeat;
   }
@@ -337,6 +362,9 @@
   }
   .popup-presentation__form-field {
     align-items: center;
+  }
+  .form__field {
+    margin-bottom: 20px;
   }
 }
 
