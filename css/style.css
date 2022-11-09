@@ -106,58 +106,11 @@ body {
 }
 
 .btn:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#162c5e),
-    color-stop(11%, #162c5e),
-    color-stop(90%, #1c78cf),
-    to(#1c78cf)
-  );
-  background-image: -o-linear-gradient(
-    bottom,
-    #162c5e 0%,
-    #162c5e 11%,
-    #1c78cf 90%,
-    #1c78cf 100%
-  );
-  background-image: linear-gradient(
-    0deg,
-    #162c5e 0%,
-    #162c5e 11%,
-    #1c78cf 90%,
-    #1c78cf 100%
-  );
+  background: linear-gradient(266.35deg, #11DAB6 0%, #56DEE3 44.75%, #3197D0 100%);
 }
 
 .btn:active {
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#162c5e),
-    color-stop(11%, #162c5e),
-    color-stop(90%, #1c78cf),
-    to(#1c78cf)
-  );
-  background-image: -o-linear-gradient(
-    bottom,
-    #162c5e 0%,
-    #162c5e 11%,
-    #1c78cf 90%,
-    #1c78cf 100%
-  );
-  background-image: linear-gradient(
-    0deg,
-    #162c5e 0%,
-    #162c5e 11%,
-    #1c78cf 90%,
-    #1c78cf 100%
-  );
-  -webkit-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
+  background: linear-gradient(266.35deg, rgba(17, 218, 182, 0.7) 0%, rgba(49, 151, 208, 0.7) 100%);
 }
 @media (max-width: 1023px) {
   .btn {
@@ -498,7 +451,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  justify-content: center;
 }
 .main__item-descr {
   max-width: 222px;
@@ -539,9 +492,6 @@ sup {
     font-size: 20px;
     margin-bottom: 35px;
   }
-  .main__item {
-    padding-top: 22px;
-  }
   .main__list {
     margin-bottom: 40px;
   }
@@ -551,6 +501,9 @@ sup {
   .main__bottom-text {
     max-width: 355px;
   }
+  .main__item {
+    height: 79px;
+}
 }
 @media (max-width: 767px) {
   .main__body {
@@ -589,6 +542,9 @@ sup {
   .main__title {
     font-size: 20px;
   }
+  .main__descr{
+    margin-bottom: 25px;
+  }
   .main__list {
     display: none;
   }
@@ -609,7 +565,6 @@ sup {
     display: block;
     padding-bottom: 25px;
   }
-
   .slider-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -825,8 +780,11 @@ sup {
   }
 }
 @media (max-width: 1023px) {
+  .second {
+    background: url("../img/second/back.png") 50% 20px / cover no-repeat;
+}
   .second__body {
-    padding: 70px 0 95px;
+    padding: 60px 0;
   }
   .second__descr {
     margin: 0 auto 60px;
@@ -860,6 +818,9 @@ sup {
   .second__list > *:not(:last-child) {
     margin-right: 15px;
   }
+  .second__list {
+    margin-bottom: 35px;
+}
 }
 @media (max-width: 767px) {
   .second__body {
@@ -949,6 +910,9 @@ sup {
   .second {
     background: url("../img/second/back.png") 50% 107px / cover no-repeat;
   }
+  .second__content:nth-child(2) > .second__content-box {
+    padding: 20px 15px 0;
+}
 }
 /* ================================>  third  <================================== */
 .third {
@@ -1092,8 +1056,8 @@ sup {
 }
 @media (max-width: 1023px) {
   .third__body {
-    padding: 70px 0 61px;
-  }
+    padding: 60px 0;
+}
   .third__title {
     text-align: center;
     margin-bottom: 30px;
@@ -1218,7 +1182,7 @@ sup {
     font-size: 14px;
     line-height: 100%;
     bottom: 50px;
-    left: 63px;
+    left: 50px;
   }
   .third__owner-bracket {
     top: -16px;
@@ -1233,7 +1197,7 @@ sup {
     text-align: center;
     font-size: 16px;
     margin-right: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .third__bottom-arrow {
     display: none;
@@ -1311,6 +1275,10 @@ sup {
   }
 }
 @media (max-width: 1023px) {
+  .fourth {
+    background: url("../img/fourth/back.png") 0 0 no-repeat, rgba(255, 255, 255, .5);
+    background-blend-mode: overlay;
+}
   .fourth__item-img {
     max-width: 225px;
   }
@@ -1319,7 +1287,7 @@ sup {
     font-size: 14px;
   }
   .fourth__body {
-    padding: 80px 0 23px;
+    padding: 60px 0 23px;
   }
   .fourth__descr {
     font-size: 20px;
@@ -1445,8 +1413,9 @@ sup {
 }
 .fifth__bottom-image {
   position: absolute;
+  left: 50%;
   bottom: 0;
-  left: 0;
+  transform: translateX(-50%);
 }
 .fifth__laptop-text {
   display: none;
@@ -1675,7 +1644,7 @@ sup {
 }
 @media (max-width: 1023px) {
   .sixth__body {
-    padding: 80px 0 70px;
+    padding: 60px 0;
   }
   .sixth__descr:nth-child(2) {
     position: relative;
@@ -1763,11 +1732,15 @@ sup {
 }
 /* ======================================> seventh <========================================== */
 .seventh {
-  background: url("../img/seventh/back.png") 100% 0 no-repeat,
-    rgba(255, 255, 255, 0.5);
-  background-blend-mode: overlay;
+  background: url("../img/seventh/back.png") 100% 0 no-repeat;
 }
-
+@media (max-width: 1560px) {
+  .seventh {
+    background: url("../img/seventh/back.png") 100% 0 no-repeat,
+      rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+  }
+}
 .seventh__body {
   padding: 80px 0 28px;
 }
@@ -2326,6 +2299,7 @@ sup {
 .check {
   margin-top: 35px;
 }
+
 .calc__calculator-title {
   font-family: "Gotham-Bold";
   font-size: 20px;
@@ -2434,14 +2408,95 @@ sup {
 }
 
 .calc__result {
-  font-family: "Gotham Pro";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Gotham-Medium";
   font-size: 32px;
   line-height: 31px;
-  text-align: center;
+  text-align: right;
   color: #000000;
   margin-top: 88px;
+  margin-bottom: 60px;
+}
+.calc__result span{
+  color: #CA2E19;
+}
+@media (max-width: 1198px) {
+  .calc__calculator{
+    width: 796px;
+    overflow: auto;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .nineth {
+    background: url("../img/nineth/back.png") 0 no-repeat, rgba(255, 255, 255, .5);
+    background-blend-mode: overlay;
+}
+  .calc__calculator{
+    width: 640px;
+  }
+  .calc__title {
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+}
+@media (max-width: 767px) {
+  .content-three__container {
+    padding: 0 35px;
+}
+  .calc__calculator{
+    width: 490px;
+  }
+  .calc__calculator-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  .calc__result {
+    font-size: 22px;
+    line-height: 23px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .content-three__container {
+    padding: 0 20px;
+}
+.calc__calculator {
+  width: 240px;
+  padding-bottom: 20px;
+}
+.tooltip {
+  font-size: 14px;
+}
+.calc__title {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 20px;
+}
+.client {
+  margin-top: 30px;
+}
+.calc__calculator-title {
+  font-size: 16px;
+  line-height: 17px;
+}
+.calc__result {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.second__box {
+  margin: 0 auto;
+}
+.calc__calculator-range {
+  margin-top: 10px;
+}
+.nineth_bottom{
+  margin-top: 20px;
+}
 }
 
 /* ===================================>  tenth  <=================================== */
@@ -2525,9 +2580,7 @@ sup {
   .tenth__item-title {
     font-size: 18px;
   }
-  img {
-    max-width: 240px;
-  }
+
   .tenth__bottom {
     text-align: center;
   }
@@ -2700,6 +2753,11 @@ sup {
 }
 }
 @media (max-width: 767px) {
+  .last {
+    background: url("../img/last/back.png") 50% / cover no-repeat, rgba(255, 255, 255, .5);
+    background-blend-mode: overlay;
+  }
+
   .last__title{
     font-size: 26px;
   }
@@ -2906,7 +2964,7 @@ sup {
 	line-height: 125%;
   color: #000000;
  }
- .politicy {
+ .modal__politicy {
 	font-size: 14px;
 	line-height: 1.2;
 	font-weight: 400;
@@ -2916,9 +2974,16 @@ sup {
  @media (max-width: 1023px) {
   .footer__left {
     font-size: 14px;
+    max-width: 240px;
 }
 .footer__logo{
-  max-width: 220px;
+  max-width: 200px;
+}
+.footer__phone-img img{
+  max-width: 33px;
+}
+.footer__phone{
+ justify-content: flex-start;
 }
 .footer__phone-number {
   font-size: 18px;
@@ -2930,9 +2995,18 @@ sup {
 .footer__f5-descr{
   font-size: 14px;
   max-width: 175px;
+  text-align: right;
+}
+.footer__right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
  }
  @media (max-width: 767px) {
+  .footer__body {
+    padding: 30px 0;
+  }
   .footer__f5-descr {
     max-width: 195px;
 }
@@ -2975,4 +3049,12 @@ sup {
 				 justify-content: center;
 	  margin-bottom: 15px;
 	}
+ }
+ @media (max-width: 600px) {
+  .footer__body {
+    padding: 20px 0;
+}
+.footer__right {
+  align-items: center;
+}
  }
